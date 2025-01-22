@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* optimization: */
+/* tell page you arent transitioning the whole page */
+html {
+  view-transition-name: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #e2e2e2;
+  font-family: sans-serif;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+.App {
+  padding: 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    text-transform: capitalize;
+  }
+}
+
+.coffee-list {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  margin-bottom: 15px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &.card--individual {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+
+    .card__media {
+      flex: 0 0 25%;
+    }
+
+    .card__content {
+      h1 {
+        font-size: 1.75rem;
+        margin-top: 0;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(*):only-child {
+    animation: scale-down 0.3s cubic-bezier(0, 0, 0.75, 1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-new(*):only-child {
+    animation: scale-up 0.3s cubic-bezier(0, 0, 0.75, 1);
+  }
+}
+
+@keyframes scale-down {
+  to {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes scale-up {
+  to {
+    transform: scale(1.5);
+  }
+} */
